@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pokemon-menu bg-white">
     <ul class="framed buttons">
       <li v-for="element in optionsList">
         <button @click="selection = element">{{ element }}</button>
@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { ref, watchEffect, defineEmits } from "vue";
+import { ref, watchEffect } from "vue";
 let selection = ref(null);
 const emit = defineEmits(["update"]);
 
@@ -25,5 +25,8 @@ const optionsList = [
 ];
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.pokemon-menu {
+  margin: 0 0 0 0;
+}
 </style>
